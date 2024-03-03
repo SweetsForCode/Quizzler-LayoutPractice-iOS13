@@ -1,5 +1,4 @@
-
-![Owl Develop Banner]((https://raw.githubusercontent.com/SweetsForCode/Dicee-iOS13/master/OwlDevelopBanner.png))
+![Owl Develop Banner](OwlDevelopBanner.png)
 
 #  Quizzler
 
