@@ -1,45 +1,38 @@
 
-![App Brewery Banner](Documentation/AppBreweryBanner.png)
+![Owl Develop Banner]((https://raw.githubusercontent.com/SweetsForCode/Dicee-iOS13/master/OwlDevelopBanner.png))
 
 #  Quizzler
 
-## Our Goal
+## My Goal
 
-The goal of this tutorial is to take you one step further in your journey of becoming an app developer. We are going to introduce you to the holy grail of mobile design patterns: the Model View Controller (MVC) pattern. A design pattern is simply a repeatable and optimised solution to a common software problem and you’ll learn more about this when use in the tutorial.
+My goal from this tutorial was to give me a refresher on structs and how they are used in Swift & iOS development. 
 
-## What you will create
+## What I created
 
-You will program a trivia quiz app. If you have another field of expertise such as law or medicine, you’ll be glad to know that multiple choice question apps are one of the most popular types of educational apps on the App Store! 
+Through this tutorial I created a trivia app, that allows a user to answer 7 true or false questions. I ended up getting carried away, and went a bit futher than what the tutorial provided. Instead of 100% following the tutorial I made the following changes: 
 
-## What you will learn
+* Instead of simply changing the background color when a user selects T/F I changed the sprite & button text color entirely. Thank you Photoshop!
+* The app now has a "Restarting..." delay at the end of the quiz to give the user a bit of a _refreshing_ feeling. A simple but effective method of using gamification to allow a user to stay hooked onto a game.
+* Rather than using structs (like the tutorial intended) I opted to just use a 2D array, simply because I was hyper focused on smaller UI/UX details (I was also stuck on the autolayout for about half an hour, if I'm being 100% honest). 
 
-* How to programmatically change UI elements such as Labels and Buttons.
-* What is a design pattern and how is it used in programming.
-* How to use the Model-View-Controller or MVC pattern for app development.
-* Learn about Swift Structures how to instantiate a struct instance.
-* Understand the difference between value types and reference types. 
-* Learn about Swift Classes and creating Objects.
-* Compare Swift Classes with Swift Structs and know when to use which.
-* Learn about Object Oriented Programming.
-* How to refactor code and stay organised.
+## What I learned
+
+* How to programmatically hide UI elements on iOS
+* How to programmatically change sprites (images, background images, etc.)
+* How to use UIColor effectively, and through shorthand (UIColor.red vs .red)
 
 
 
 ## Default Quiz
 
 ```
-Question(q: "A slug's blood is green.", a: "True"),
-        Question(q: "Approximately one quarter of human bones are in the feet.", a: "True"),
-        Question(q: "The total surface area of two human lungs is approximately 70 square metres.", a: "True"),
-        Question(q: "In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.", a: "True"),
-        Question(q: "In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.", a: "False"),
-        Question(q: "It is illegal to pee in the Ocean in Portugal.", a: "True"),
-        Question(q: "You can lead a cow down stairs but not up stairs.", a: "False"),
-        Question(q: "Google was originally called 'Backrub'.", a: "True"),
-        Question(q: "Buzz Aldrin's mother's maiden name was 'Moon'.", a: "True"),
-        Question(q: "The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.", a: "False"),
-        Question(q: "No piece of square dry paper can be folded in half more than 7 times.", a: "False"),
-        Question(q: "Chocolate affects a dog's heart and nervous system; a few ounces are enough to kill a small dog.", a: "True")
+    let questions:[String:Bool] = ["Luke turned to the dark side. ": false,
+                                   "Batman is Bruce Wayne": true,
+                                   "The Flash is fast": true,
+                                   "Kyber Crystals don't power a lightsaber": false,
+                                   "The Avatar has to master 3 elements": false,
+                                   "Majora destroyed termina in 3 days": true,
+                                   "Zelda is the boy in green.": false]
 ```
 
 ## Multiple Choice Quiz
@@ -60,4 +53,4 @@ Question(q: "A slug's blood is green.", a: "True"),
 
 >This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
 
-![End Banner](Documentation/readme-end-banner.png)
+>This repository was provided by the App Brewery with modifications from _Owl Develop_
