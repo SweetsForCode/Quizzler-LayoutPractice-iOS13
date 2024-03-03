@@ -19,12 +19,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="500" verticalCompressionResistancePriority="1000" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-jB-Wwb">
                                 <rect key="frame" x="0.0" y="750" width="393" height="102"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
-                                <rect key="frame" x="20" y="134" width="353" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Iwh-tu-nWD">
                                 <rect key="frame" x="20" y="465" width="353" height="235"/>
                                 <subviews>
@@ -87,11 +81,25 @@
                                     <constraint firstAttribute="height" constant="235" id="s30-UJ-YS7"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2s-vz-0Fq">
+                                <rect key="frame" x="20" y="59" width="67" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
+                                <rect key="frame" x="20" y="134" width="353" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.17254901960784313" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="K2s-vz-0Fq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1kI-a2-QIj"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="top" secondItem="Iwh-tu-nWD" secondAttribute="bottom" constant="50" id="20g-7i-TL3"/>
+                            <constraint firstItem="K2s-vz-0Fq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7rG-BU-ilH"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C8d-BS-efQ"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PRB-GX-AmC"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XIj-1r-0ET"/>
@@ -100,6 +108,7 @@
                             <constraint firstAttribute="bottom" secondItem="eGL-jB-Wwb" secondAttribute="bottom" id="dRC-oA-AUA"/>
                             <constraint firstItem="rSI-li-mhO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="epg-EP-NAb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iwh-tu-nWD" secondAttribute="trailing" constant="20" id="j7g-Tp-w6A"/>
+                            <constraint firstItem="rSI-li-mhO" firstAttribute="top" secondItem="K2s-vz-0Fq" secondAttribute="bottom" constant="20" id="ovj-zA-Yij"/>
                             <constraint firstItem="rSI-li-mhO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rrG-eu-LVj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rSI-li-mhO" secondAttribute="trailing" constant="20" id="t64-ne-JFD"/>
                             <constraint firstItem="rSI-li-mhO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zhe-F2-45z"/>
@@ -110,6 +119,7 @@
                         <outlet property="progressBar" destination="TXm-qh-7Xg" id="77l-pe-b7m"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="DWr-uC-10g"/>
                         <outlet property="restartButton" destination="vNp-4i-CtA" id="EXL-dO-exI"/>
+                        <outlet property="scoreLabel" destination="K2s-vz-0Fq" id="ePD-lo-Gif"/>
                         <outlet property="stackView" destination="Iwh-tu-nWD" id="bbz-yo-DWA"/>
                         <outlet property="trueButton" destination="oVw-Hl-IRe" id="dX7-1Y-KC3"/>
                     </connections>

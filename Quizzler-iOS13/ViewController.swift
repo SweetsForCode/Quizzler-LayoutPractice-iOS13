@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     
     
     //MARK: IBOutlets
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var trueButton: UIButton!
@@ -90,6 +91,7 @@ class ViewController: UIViewController {
     }
     
     private func update() {
+        scoreLabel.text = "Score: \(progress)"
         progressBar.progress = Float(progress)/Float(totalProgress)
         questionLabel.text = Array(questions)[currentIndex].key
         timeDelay()
